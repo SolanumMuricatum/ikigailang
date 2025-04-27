@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "InclusiveSans";
+  src:
+    url("/fonts/InclusiveSans-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf"),
+}
+
+.main-container{
+  /* width: 1440px;  */
+  width: 100%;
+  height: 1700px; 
+  position: absolute; 
+  background-color: red;
+}
+.main-block{
+  display: grid;
+  grid-template-rows: 90px 1fr;
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1e1e1e83 100%), url("../photo/japan_light.png");
+  background-size: cover;
+  background-blend-mode: multiply, normal;
+}
+
+.header{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo{
+  width: 181px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logo-name{
+  margin-left: 5px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  color: #000000;
+}
+.center-bar {
+  margin: 0;
+  max-width: fit-content;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.center-bar > div {
+  margin: 0 20px; /* Установите значение, которое вам нужно */
+}
+.text-bar{
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.theme{
+  width: 181px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: wrap;
+  height: 44px;
+}
+.circle{
+  margin-right: 15px;
+  border: 1.50px solid #000000;
+  border-radius: 100%;
+  width: 16px;
+  height: 16px;
+  background: #5db2b7;
+}
+.company-main-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 65px;
+}
+.company-main-description > p:nth-child(1),
+.company-main-description > p:nth-child(2) {
+  width: 554px;
+  height: 60px;
+  color: #000000;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 48px;
+}
+.company-main-description > div > p:nth-child(1),
+.company-main-description > div > p:nth-child(2),
+.company-main-description > div > p:nth-child(3),
+.company-main-description > div > p:nth-child(4),
+.company-main-description > div > p:nth-child(5) {
+  width: 580;
+  height: 30px;
+  font-family: "InclusiveSans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+}
+.company-main-description > button {
+  margin-top: 40px;
+  border: none;
+  border-radius: 10px;
+  width: 440px;
+  height: 65px;
+  background: #5db2b7;
+  font-family: "InclusiveSans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}

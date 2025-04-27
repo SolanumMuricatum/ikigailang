@@ -1,0 +1,35 @@
+.courses-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.card {
+  min-width: 300px; /* карточка не меньше 300px */
+  height: 400px;
+  background-color: #8C4743;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  flex-shrink: 0; /* карточка НЕ сжимается */
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
