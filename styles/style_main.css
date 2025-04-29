@@ -4,16 +4,24 @@
   color: var(--color-main);
 }
 
+.header-small-device{
+  display: none;
+}
+
+.header-big-device{
+  display: block;
+}
+
 @font-face {
   font-family: "InclusiveSans";
   src:
-    url("/fonts/InclusiveSans-VariableFont_wght.ttf") format("truetype"),
+    url("/fonts/InclusiveSans-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Inter";
   src:
-    url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype"),
+    url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
 
 :root {
@@ -76,6 +84,7 @@ circle{
   align-items: center;
   justify-content: space-evenly;
 }
+
 .logo{
   width: 181px;
   height: 44px;
@@ -194,7 +203,7 @@ circle{
 .company-main-description > div > p:nth-child(3),
 .company-main-description > div > p:nth-child(4),
 .company-main-description > div > p:nth-child(5) {
-  width: 580;
+  width: 580px;
   height: 30px;
   font-family: sans-serif;
   font-weight: 400;
@@ -203,7 +212,7 @@ circle{
 }
 .company-main-description > button {
   margin-top: 40px;
-  border: none;
+  border: 1px solid var(--color-main);
   border-radius: 10px;
   width: 440px;
   height: 65px;
@@ -215,6 +224,12 @@ circle{
   text-align: center;
   color: var(--color-extra);
 }
+
+.company-main-description > button:hover{
+  background: var(--accent-color-extra);
+  color: var(--color-main);
+}
+
 
 .courses-block{
   width: 100%;
@@ -313,7 +328,7 @@ h2{
 .card-text-wrapper > button{
   margin-left: 20px;
   margin-top: 30px;
-  border: none;
+  border: 1px solid var(--color-main);
   border-radius: 10px;
   width: 130px;
   height: 40px;
@@ -324,6 +339,11 @@ h2{
   line-height: 150%;
   text-align: center;
   color: var(--color-extra);
+}
+
+.card-text-wrapper > button:hover{
+  background: var(--accent-color-extra);
+  color: var(--color-main);
 }
 
 .about-us-block{
@@ -361,7 +381,7 @@ h2{
 
 .teacher-block button {
   margin-top: 70px;
-  border: none;
+  border: 1px solid var(--color-main);
   border-radius: 10px;
   width: 440px;
   height: 65px;
@@ -374,10 +394,15 @@ h2{
   color: var(--color-extra);
 }
 
+.teacher-block button:hover{
+  background: var(--accent-color-extra);
+  color: var(--color-main);
+}
+
 .teacher-block{
   margin-top: 70px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 }
@@ -386,7 +411,7 @@ h2{
   width: 520px; 
   height: 520px; 
   border-radius: 50%; 
-  border: 3px var(--color-main) solid"
+  border: 3px var(--color-main) solid;
 }
 
 .teacher-quote{
@@ -399,7 +424,7 @@ h2{
   font-family: sans-serif; 
   font-weight: 400; 
   line-height: 30px; 
-  word-wrap: break-word"
+  word-wrap: break-word;
 }
 
 .teacher-quote div{
@@ -437,6 +462,8 @@ table {
 
 th{
   height: 60px !important;
+  background-color: var(--accent-color-extra); 
+  color: var(--color-main);
 }
 
 th, td {
@@ -446,9 +473,8 @@ th, td {
   border: 1px solid var(--color-main);
 }
 
-th {
-  background-color: var(--accent-color-extra); 
-  color: var(--color-main);
+td {
+  background-color: var(--color-extra);
 }
 
 .reviews-block{
@@ -510,4 +536,309 @@ th {
 .highlight {
   color:var(--accent-color-main);
   text-decoration: underline;
+}
+
+.contact-info > div > a{
+  color: var(--accent-color-main);
+}
+
+@media (max-width: 1440px) {
+
+  .header-small-device{
+    display: block;
+    position: relative;
+  }
+
+  .header-big-device{
+    display: none;
+  }
+
+  iframe{
+    display: none;
+  }
+
+  .main-container{
+    height: 4920px; 
+  }
+
+  .company-main-description {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+  }
+
+  .courses-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 748px;
+    margin: auto;
+  }
+  
+  .cards-wrapper{
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .about-us-block{
+    height: 1300px;
+  }
+
+  .teacher-block{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teacher-block > div{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teacher-photo{
+    width: 520px; 
+    height: 520px; 
+    border-radius: 50%; 
+    border: 3px var(--color-main) solid;
+  }
+  
+  .teacher-quote{
+    text-align: center;
+  }
+
+  table {
+    width: 680px; 
+    border-collapse: collapse;
+  }
+
+  .reviews-wrapper > div {
+    width: 680px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .contacts-wrapper{
+    text-align: center;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .contacts-wrapper > div{
+    padding-top: 50px;
+  }
+  
+  .header-burger{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .logo-wrapper{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Стили для бургер-меню */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 23px;
+    padding-left: 25px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  .burger-line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-main);
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+    background-color: var(--color-main);
+  }
+  
+  /* Стили для бокового меню */
+  .side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Скрыто слева */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    transition: left 0.3s ease; /* Плавное открытие */
+    z-index: 10;
+  }
+  
+  .side-nav.active {
+    padding-top: 70px;
+    font-family: sans-serif;
+    left: 0;  /* Меню выезжает */
+    border-style: solid;
+    border-color: var(--color-main);
+    border-width: 0 1px 1px 0;
+    background-color: var(--background-color);
+  }
+  
+  .text-bar-burger {
+    box-sizing: border-box; /* Включает padding и border в общую ширину и высоту */
+    font-size: 20px;
+    padding: 20px;
+    padding-left: 25px !important; 
+    padding-right: 70px !important; 
+    color: var(--color-main);
+    cursor: pointer;
+    width: 100%; /* Устанавливаем ширину в 100% */
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+  
+  .text-bar-burger:hover {
+    background-color: var(--accent-color-main);
+  }
+  
+  .burger-menu.open{
+    position: fixed;
+  }
+  /* Анимация бургера при открытии */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .logo-name {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Анимация бургера при открытии */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .theme-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: wrap;
+    height: 90px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 911px){
+  .courses-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 354px;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .logo-name {
+    font-size: 20px;
+  }
+
+  .text-bar {
+    font-size: 12px;
+  }
+
+  .main-block {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .company-main-description > p:nth-child(1),
+  .company-main-description > p:nth-child(2) {
+    font-size: 24px;
+  }
+
+  .company-main-description > div > p {
+    font-size: 16px;
+  }
+
+  .company-main-description > button {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .courses-wrapper {
+    padding: 10px;
+  }
+
+  .card {
+    width: 250px;
+    height: auto;
+  }
+
+  .card-name,
+  .card-description {
+    margin-left: 10px;
+  }
+
+  .teacher-photo {
+    width: 260px;
+    height: 260px;
+  }
+
+  .teacher-quote {
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .contact-info {
+    font-size: 14pt;
+    text-align: center;
+  }
+
+  table {
+    font-size: 12pt;
+  }
+
+  th, td {
+    padding: 8px;
+  }
 }
