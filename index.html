@@ -1,39 +1,456 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Слайдер карточек</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style_main.css">
 </head>
 <body>
+  <div class="main-container">
+    <div class="main-block">
+      <div class="header-big-device">
+        <header class="header">
+          <div class="logo">
+            <svg id="svg-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15.25" fill="none"/>
+              <path d="M18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 21.588C15.8853 21.7747 15.7597 21.962 15.623 22.15C14.309 23.947 12.496 25.004 11 25L10.698 22.925L8.62 23.281C8.154 21.868 8.649 19.767 9.962 17.969C7.935 17.266 6.442 15.897 6 14.5L7.86 13.569L6.894 11.703C8.081 10.82 10.42 10.713 12.509 11.404C12.509 9 13.336 6.87 14.539 6L16 7.5L17.46 6C18.664 6.87 19.502 9 19.49 11.404C21.58 10.714 23.919 10.82 25.106 11.703L24.141 13.569L26 14.5C25.558 15.896 24.065 17.265 22.038 17.97C23.351 19.767 23.846 21.868 23.38 23.281L21.302 22.925L21 25C19.504 25.004 17.691 23.947 16.377 22.15C16.2435 21.9681 16.1177 21.7806 16 21.588Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="logo-name">IkigaiLang</div>
+          </div>
+          <div class="center-bar text-bar">
+            <div class="details-text-wrapper">
+              <div id="about-us-bar">О нас</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="about-us-scroll-to">О нас</div>
+                <div id="reviews-scroll-to">Отзывы</div>
+              </div>
+            </div>
+            <div id="courses-scroll-to">Курсы</div>
+            <div>Онлайн-тест</div>
+            <div>Расписание</div>
+            <div id="prices-scroll-to">Цены</div>
+            <div>FAQ</div>
+            <div id="contacts-scroll-to">Контакты</div>
+          </div>
+          <div class="theme-wrapper text-bar">
+            <div class="circle"></div>
+            <div class="details-text-wrapper">
+              <div id="theme-bar">Тема</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="light-mode">Светлая</div>
+                <div id="dark-mode">Тёмная</div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="header-small-device">
+        <header class="header-burger">
+          <!-- Бургер-меню -->
+          <div class="burger-menu" id="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        
+          <div class="logo-wrapper">
+            <div class="logo-name">
+              <div class="logo">
+                <svg id="svg-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="15.25" fill="none"/>
+                  <path d="M18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16 21.588C15.8853 21.7747 15.7597 21.962 15.623 22.15C14.309 23.947 12.496 25.004 11 25L10.698 22.925L8.62 23.281C8.154 21.868 8.649 19.767 9.962 17.969C7.935 17.266 6.442 15.897 6 14.5L7.86 13.569L6.894 11.703C8.081 10.82 10.42 10.713 12.509 11.404C12.509 9 13.336 6.87 14.539 6L16 7.5L17.46 6C18.664 6.87 19.502 9 19.49 11.404C21.58 10.714 23.919 10.82 25.106 11.703L24.141 13.569L26 14.5C25.558 15.896 24.065 17.265 22.038 17.97C23.351 19.767 23.846 21.868 23.38 23.281L21.302 22.925L21 25C19.504 25.004 17.691 23.947 16.377 22.15C16.2435 21.9681 16.1177 21.7806 16 21.588Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="logo-name">IkigaiLang</div>
+              </div>
+            </div>
+          </div>
 
-  <header class="header">
-    <!-- Бургер-меню -->
-    <div class="burger-menu" id="burger-icon">
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
+          <div class="theme-wrapper text-bar">
+            <div class="circle"></div>
+            <div class="details-text-wrapper">
+              <div id="theme-bar">Тема</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="light-mode-burger">Светлая</div>
+                <div id="dark-mode-burger">Тёмная</div>
+              </div>
+            </div>
+          </div>
+          
+        </header>
+        
+        <!-- Навигационное боковое меню -->
+        <nav class="side-nav" id="nav-menu">
+          <div class="text-bar-burger" id="about-us-burger-scroll-to">О нас</div>
+          <div class="text-bar-burger" id="reviews-burger-scroll-to">Отзывы</div>
+          <div class="text-bar-burger" id="courses-burger-scroll-to">Курсы</div>
+          <div class="text-bar-burger">Онлайн-тест</div>
+          <div class="text-bar-burger">Расписание</div>
+          <div class="text-bar-burger" id="prices-burger-scroll-to">Цены</div>
+          <div class="text-bar-burger" id="contacts-burger-scroll-to">Контакты</div>
+        </nav>
+        
+      </div>
+      
+      <div id="main-description" class="company-main-description">
+        <p>Японский язык - </p>
+        <p>сейчас и навсегда</p>
+        <div style="margin-top: 40px;">
+          <p>Добро пожаловать в нашу школу, где каждый урок — это </p>
+          <p>возможность узнать что-то новое. Мы предлагаем </p>
+          <p>обучение для всех уровней, от начинающих до </p>
+          <p>продвинутых. Присоединяйтесь к нам и откройте для себя </p>
+          <p>удивительный мир японского языка!</p>
+        </div>
+        <button>Проверьте уровень своих знаний</button>
+      </div>
     </div>
-  
-    <!-- Название школы по центру -->
-    <div class="logo-name">
-      IkigaiLang
-    </div>
-  </header>
-  
-  <!-- Навигационное боковое меню -->
-  <nav class="side-nav" id="nav-menu">
-    <div class="text-bar">О нас</div>
-    <div class="text-bar">Курсы</div>
-    <div class="text-bar">Контакты</div>
-    <!-- Добавь остальные ссылки сюда -->
-  </nav>
-  
-  
-  
-  
 
-<script src="scripts.js"></script>
-</body>
+    <div class="courses-block">
+      <div id="courses-target-div" class="container-header">
+        <div id="prevBtn">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5808 32.5884L12.2474 24.255M12.2474 24.255L20.5808 15.9217M12.2474 24.255L37.2474 24.255" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke-width="2" />
+          </svg>
+        </div>
+        <h2>Наши курсы</h2>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke-width="2" />
+          </svg>
+        </div>
+        <div id="nextBtn">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.1667 16.6666L37.5 25M37.5 25L29.1667 33.3333M37.5 25L12.5 25" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div> 
+      </div>
+      
+      <div id="courses-wrapper" class="courses-wrapper">
+        <div id="cards-wrapper" class="cards-wrapper">
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Курс для детей (все уровни)
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Изучение основ японского языка через игры и интерактивные занятия
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Курс для начинающих (основы)
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Основы грамматики и разговорного языка, изучение повседневных фраз
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                Курс по разговорному языку
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Развитие навыков общения, акцент на разговорную практику и аудирование
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                Курс по японской грамматике
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Углубленное изучение грамматических структур и правил
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Курс для путешествий (основы)
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Изучение полезных фраз и слов для путешествий по Японии и погружении в культуру
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+
+          <div class="card">
+            <img class="card-img" src="./photo/card-img.png" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Курс для бизнеса и работы
+              </div>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Специфика бизнес-лексики и делового общения на японском языке
+              </article>
+            </div>
+  
+            <div class="card-text-wrapper">
+              <button>Перейти</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us-block">
+      <div id="about-us-target-div" class="container-header">
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+        <h2>О нас</h2>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="foundation-wrapper">
+        <div class="data-block-wrapper">
+          <div class="data-wrapper">2018</div>
+          <div class="data-description-wrapper">Год основания</div>
+        </div>
+        <div class="data-block-wrapper">
+          <div class="data-wrapper">34</div>
+          <div class="data-description-wrapper">Преподавателей в штате</div>
+        </div>
+        <div class="data-block-wrapper">
+          <div class="data-wrapper">287</div>
+          <div class="data-description-wrapper">Учащихся</div>
+        </div>
+      </div>
+      
+      <div class="teacher-block">
+        <img class="teacher-photo" src="./photo/teacher.png" alt=""/>
+        <div>
+          <div class="teacher-quote">Мы - школа японского языка с традиционными традициями, готовые обучить Вас и передать мастерство наших учителей, проведя Вас по пути лунной тропы<br/><br/>
+            <div>- Ушиджима Вакатоши, глава IkigaiLang</div>
+          </div>
+          <button>Записаться на консультацию</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prices-block">
+      <div id="prices-target-div" class="container-header">
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+        <h2>Цены</h2>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <div class="inner-scroll-container">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Название курса</th>
+                      <th>Срок обучения</th>
+                      <th>Количество занятий</th>
+                      <th>Цена за 1 месяц</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Курс по японскому языку для детей (все уровни)</td>
+                  <td>12 месяцев</td>
+                  <td>144 занятия (144 ак. ч.)</td>
+                  <td>200 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для начинающих</td>
+                    <td>6 месяцев</td>
+                    <td>72 занятия (72 ак. ч.)</td>
+                    <td>150 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по разговорному японскому языку</td>
+                    <td>9 месяцев</td>
+                    <td>108 занятий (108 ак. ч.)</td>
+                    <td>180 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японской грамматике</td>
+                    <td>4 месяца</td>
+                    <td>48 занятий (48 ак. ч.)</td>
+                    <td>220 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для путешествий</td>
+                    <td>3 месяца</td>
+                    <td>36 занятий (36 ак. ч.)</td>
+                    <td>130 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для бизнеса</td>
+                    <td>8 месяцев</td>
+                    <td>96 занятий (96 ак. ч.)</td>
+                    <td>250 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для средних уровней</td>
+                    <td>12 месяцев</td>
+                    <td>144 занятия (144 ак. ч.)</td>
+                    <td>200 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку через аниме</td>
+                    <td>5 месяцев</td>
+                    <td>60 занятий (60 ак. ч.)</td>
+                    <td>170 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для детей (игровой подход)</td>
+                    <td>6 месяцев</td>
+                    <td>72 занятия (72 ак. ч.)</td>
+                    <td>160 BYN</td>
+                </tr>
+                <tr>
+                    <td>Курс по японскому языку для подготовки к JLPT</td>
+                    <td>10 месяцев</td>
+                    <td>120 занятий (120 ак. ч.)</td>
+                    <td>240 BYN</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-block">
+      <div id="reviews-target-div" class="container-header">
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+        <h2>Отзывы</h2>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="reviews-wrapper">
+        <div>
+          Отзывы о нас Вы можете посмотреть на <a href="https://yandex.by/maps/-/CHfrV8z0">Яндекс</a> и <a href="https://maps.app.goo.gl/MFzKZysLwuWqaVBq7">Google</a> Картах
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contacts-block">
+      <div id="contacts-target-div" class="container-header">
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+        <h2>Контакты</h2>
+        <div class="circle-wrapper">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" fill="#5DB2B7" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+      <div class="contacts-wrapper">
+        <div class="contact-info">
+          <div>Адрес:<br/> <a href="https://maps.app.goo.gl/PbeJHPNbuCpTWfCN6">г. Минск, ул. Петра Мстиславца 10,</a><br/><a href="https://maps.app.goo.gl/PbeJHPNbuCpTWfCN6">офис 402-1</a></div>
+          <div>
+              <span>Телефон:<br/></span>
+              <span class="highlight">+375(29)839-33-22</span>
+          </div>
+          <div>
+              <span>Электронная почта:<br/></span>
+              <span class="highlight">info@ikigailang.by</span>
+          </div>
+          <div>График работы:<br/>пн - пт: с 9:00 до 18:00</div>
+        </div>
+        <div>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10031.993500645482!2d13.723449987158203!3d51.0531178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf42a29a1f35%3A0x8d82ef8d8f456eac!2z0JTRgNC10LfQtNC10L3RgdC60LDRjyDQsNC60LDQtNC10LzQuNGPINC40LfQvtCx0YDQsNC30LjRgtC10LvRjNC90L7Qs9C-INC40YHQutGD0YHRgdGC0LLQsA!5e0!3m2!1sru!2sby!4v1745673507590!5m2!1sru!2sby" width="770" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts/script_main.js"></script>
+</body>  
 </html>
