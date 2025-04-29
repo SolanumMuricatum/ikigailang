@@ -569,6 +569,7 @@ td {
     align-items: center;
     text-align: center;
     height: 500px;
+    padding-left: 0px;
   }
 
   .courses-wrapper{
