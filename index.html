@@ -71,7 +71,7 @@
           </div>
 
           <div class="theme-wrapper text-bar">
-            <div class="circle"></div>
+            <div class="circle" id="circle-burger"></div>
             <div class="details-text-wrapper">
               <div id="theme-bar">Тема</div>
               <div class="triangle-bar">▽</div>
@@ -86,15 +86,16 @@
         
         <!-- Навигационное боковое меню -->
         <nav class="side-nav" id="nav-menu">
-          <div class="text-bar-burger" id="about-us-burger-scroll-to">О нас</div>
-          <div class="text-bar-burger" id="reviews-burger-scroll-to">Отзывы</div>
-          <div class="text-bar-burger" id="courses-burger-scroll-to">Курсы</div>
-          <div class="text-bar-burger">Онлайн-тест</div>
-          <div class="text-bar-burger">Расписание</div>
-          <div class="text-bar-burger" id="prices-burger-scroll-to">Цены</div>
-          <div class="text-bar-burger" id="contacts-burger-scroll-to">Контакты</div>
-        </nav>
-        
+          <div class="side-nav-wrapper">
+            <div class="text-bar-burger" id="about-us-burger-scroll-to">О нас</div>
+            <div class="text-bar-burger" id="reviews-burger-scroll-to">Отзывы</div>
+            <div class="text-bar-burger" id="courses-burger-scroll-to">Курсы</div>
+            <div class="text-bar-burger">Онлайн-тест</div>
+            <div class="text-bar-burger">Расписание</div>
+            <div class="text-bar-burger" id="prices-burger-scroll-to">Цены</div>
+            <div class="text-bar-burger" id="contacts-burger-scroll-to">Контакты</div>
+          </div>
+        </nav> 
       </div>
       
       <div id="main-description" class="company-main-description">
@@ -317,82 +318,85 @@
         </div>
       </div>
 
-      <div class="table-container">
-        <div class="inner-scroll-container">
-          <table>
-              <thead>
+      <div class="table-wrapper">
+        <div class="table-container">
+          <div class="inner-scroll-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название курса</th>
+                        <th>Срок обучения</th>
+                        <th>Количество занятий</th>
+                        <th>Цена за 1 месяц</th>
+                    </tr>
+                </thead>
+                <tbody>
                   <tr>
-                      <th>Название курса</th>
-                      <th>Срок обучения</th>
-                      <th>Количество занятий</th>
-                      <th>Цена за 1 месяц</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Курс по японскому языку для детей (все уровни)</td>
-                  <td>12 месяцев</td>
-                  <td>144 занятия (144 ак. ч.)</td>
-                  <td>200 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для начинающих</td>
-                    <td>6 месяцев</td>
-                    <td>72 занятия (72 ак. ч.)</td>
-                    <td>150 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по разговорному японскому языку</td>
-                    <td>9 месяцев</td>
-                    <td>108 занятий (108 ак. ч.)</td>
-                    <td>180 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японской грамматике</td>
-                    <td>4 месяца</td>
-                    <td>48 занятий (48 ак. ч.)</td>
-                    <td>220 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для путешествий</td>
-                    <td>3 месяца</td>
-                    <td>36 занятий (36 ак. ч.)</td>
-                    <td>130 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для бизнеса</td>
-                    <td>8 месяцев</td>
-                    <td>96 занятий (96 ак. ч.)</td>
-                    <td>250 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для средних уровней</td>
+                    <td>Курс по японскому языку для детей (все уровни)</td>
                     <td>12 месяцев</td>
                     <td>144 занятия (144 ак. ч.)</td>
                     <td>200 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку через аниме</td>
-                    <td>5 месяцев</td>
-                    <td>60 занятий (60 ак. ч.)</td>
-                    <td>170 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для детей (игровой подход)</td>
-                    <td>6 месяцев</td>
-                    <td>72 занятия (72 ак. ч.)</td>
-                    <td>160 BYN</td>
-                </tr>
-                <tr>
-                    <td>Курс по японскому языку для подготовки к JLPT</td>
-                    <td>10 месяцев</td>
-                    <td>120 занятий (120 ак. ч.)</td>
-                    <td>240 BYN</td>
-                </tr>
-              </tbody>
-          </table>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для начинающих</td>
+                      <td>6 месяцев</td>
+                      <td>72 занятия (72 ак. ч.)</td>
+                      <td>150 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по разговорному японскому языку</td>
+                      <td>9 месяцев</td>
+                      <td>108 занятий (108 ак. ч.)</td>
+                      <td>180 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японской грамматике</td>
+                      <td>4 месяца</td>
+                      <td>48 занятий (48 ак. ч.)</td>
+                      <td>220 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для путешествий</td>
+                      <td>3 месяца</td>
+                      <td>36 занятий (36 ак. ч.)</td>
+                      <td>130 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для бизнеса</td>
+                      <td>8 месяцев</td>
+                      <td>96 занятий (96 ак. ч.)</td>
+                      <td>250 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для средних уровней</td>
+                      <td>12 месяцев</td>
+                      <td>144 занятия (144 ак. ч.)</td>
+                      <td>200 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку через аниме</td>
+                      <td>5 месяцев</td>
+                      <td>60 занятий (60 ак. ч.)</td>
+                      <td>170 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для детей (игровой подход)</td>
+                      <td>6 месяцев</td>
+                      <td>72 занятия (72 ак. ч.)</td>
+                      <td>160 BYN</td>
+                  </tr>
+                  <tr>
+                      <td>Курс по японскому языку для подготовки к JLPT</td>
+                      <td>10 месяцев</td>
+                      <td>120 занятий (120 ак. ч.)</td>
+                      <td>240 BYN</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
         </div>
       </div>
+
     </div>
 
     <div class="reviews-block">

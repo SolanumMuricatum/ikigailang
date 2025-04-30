@@ -20,6 +20,7 @@ const prevBtn = document.getElementById('prevBtn');
 
 const lightMode = document.getElementById('light-mode');
 const darkMode = document.getElementById('dark-mode');
+const burgerModeSwitcher = document.getElementById('circle-burger');
 
 const lightModeBurger = document.getElementById('light-mode-burger');
 const darkModeBurger = document.getElementById('dark-mode-burger');
@@ -98,6 +99,10 @@ darkModeBurger.addEventListener('click', ()=>{
   document.body.classList.add('dark-theme');
   themeDetection();
 })
+
+burgerModeSwitcher.addEventListener('click', function() {
+  document.body.classList.toggle('dark-theme');
+});
 
 
 

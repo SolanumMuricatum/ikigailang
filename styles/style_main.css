@@ -688,6 +688,7 @@ td {
     padding-top: 50px;
     transition: left 0.3s ease; /* Плавное открытие */
     z-index: 10;
+    height: 100vh;
   }
   
   .side-nav.active {
@@ -777,69 +778,335 @@ td {
 
 }
 
-@media (max-width: 380px) {
-  .logo-name {
-    font-size: 20px;
+@media (max-width: 431px) {
+  .header-small-device{
+    display: block;
+    position: relative;
   }
 
-  .text-bar {
-    font-size: 12px;
+  .header-big-device{
+    display: none;
   }
 
-  .main-block {
-    height: auto;
-    padding: 20px 10px;
+  iframe{
+    display: none;
+  }
+
+  .main-container{
+    height: 4920px; 
+  }
+
+  .company-main-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    height: 500px;
+    width: 100%;
+    padding-left: 25px;
+    padding-top: 30px !important;
   }
 
   .company-main-description > p:nth-child(1),
   .company-main-description > p:nth-child(2) {
-    font-size: 24px;
-  }
-
-  .company-main-description > div > p {
-    font-size: 16px;
-  }
-
-  .company-main-description > button {
-    width: 90%;
-    font-size: 18px;
-  }
-
-  .courses-wrapper {
-    padding: 10px;
-  }
-
-  .card {
-    width: 250px;
-    height: auto;
-  }
-
-  .card-name,
-  .card-description {
-    margin-left: 10px;
-  }
-
-  .teacher-photo {
-    width: 260px;
-    height: 260px;
-  }
-
-  .teacher-quote {
     width: 100%;
-    font-size: 18px;
-    padding: 0 10px;
+    height: 40px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+  }
+  .company-main-description > div > p:nth-child(1),
+  .company-main-description > div > p:nth-child(2),
+  .company-main-description > div > p:nth-child(3),
+  .company-main-description > div > p:nth-child(4),
+  .company-main-description > div > p:nth-child(5) {
+    width: 100%;
+    height: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+  }
+  .company-main-description > button {
+    margin-top: 40px;
+    border: 1px solid var(--color-main);
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background: var(--accent-color-main);
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-extra);
   }
 
-  .contact-info {
-    font-size: 14pt;
+  h2{
+    font-size: 12pt;
     text-align: center;
   }
 
-  table {
-    font-size: 12pt;
+  .circle-wrapper{
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
-  th, td {
-    padding: 8px;
+  .courses-wrapper{
+    justify-content: center;
+  }
+  
+  .cards-wrapper{
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .about-us-block{
+    height: 1300px;
+  }
+
+  .foundation-wrapper{
+    padding-top: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-block-wrapper{
+    padding-top: 20px;
+  }
+
+  .data-wrapper{
+    font-size: 30pt;
+  }
+  
+  .data-description-wrapper{
+    font-size: 12pt;
+  }
+  
+  .teacher-block{
+    margin-top: 150px;
+  }
+
+  .teacher-block > div{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teacher-photo{
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    border: 3px var(--color-main) solid;
+  }
+
+  .teacher-block button {
+    margin-top: 40px;
+    border: 1px solid var(--color-main);
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background: var(--accent-color-main);
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-extra);
+  }
+  
+  .teacher-quote{
+    font-size: 14pt;
+    text-align: center;
+    width: 300px;
+  }
+
+  .teacher-quote > div{
+    margin-right: 0px !important;
+  }
+
+  table {
+    width: 300px; 
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+
+  .table-container{
+    align-items: center;
+    width: 300px;
+    font-size: 12pt;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: none;
+  }
+
+  .table-wrapper{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .reviews-wrapper > div {
+    width: 680px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .contact-info{
+    font-size: 14pt;
+  }
+  
+  .header-burger{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .logo-wrapper{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Стили для бургер-меню */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 23px;
+    padding-left: 25px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  .burger-line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-main);
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+    background-color: var(--color-main);
+  }
+  
+  /* Стили для бокового меню */
+  .side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Скрыто слева */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    transition: left 0.3s ease; /* Плавное открытие */
+    z-index: 10;
+  }
+  
+  .side-nav.active {
+    padding-top: 70px;
+    font-family: sans-serif;
+    left: 0;  /* Меню выезжает */
+    border-style: solid;
+    border-color: var(--color-main);
+    border-width: 0 1px 1px 0;
+    background-color: var(--background-color);
+  }
+  
+  .text-bar-burger {
+    box-sizing: border-box; /* Включает padding и border в общую ширину и высоту */
+    font-size: 16px;
+    padding: 20px;
+    padding-left: 25px !important; 
+    padding-right: 70px !important; 
+    color: var(--color-main);
+    cursor: pointer;
+    width: 100%; /* Устанавливаем ширину в 100% */
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+  
+  .text-bar-burger:hover {
+    background-color: var(--accent-color-main);
+  }
+  
+  .burger-menu.open{
+    position: fixed;
+  }
+  /* Анимация бургера при открытии */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .logo-name {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Анимация бургера при открытии */
+  .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .burger-menu.open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .theme-wrapper{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: wrap;
+    height: 90px;
+    padding-right: 0px !important;
+  }
+
+  .details-text-wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-right: 25px;
+  }
+
+  .details-text-wrapper > #theme-bar, .triangle-bar{
+    display: none;
+  }
+
+  .details-text-wrapper:hover .dropdown-menu {
+    display: block; /* Показываем меню */
+  }
+}
+
+@media (max-height: 431px) {
+  .side-nav-wrapper {
+    overflow-y: scroll; /* Вертикальный скролл */
+    height: 100vh;
+    margin-bottom: 70px;
   }
 }
