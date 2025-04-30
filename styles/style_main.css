@@ -857,11 +857,22 @@ td {
   .courses-wrapper{
     justify-content: center;
   }
+
+  .card{
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .card-img{
+    width: 284px;
+  }
   
   .cards-wrapper{
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    gap: 40px;
   }
 
   .about-us-block{
@@ -957,6 +968,8 @@ td {
     width: 680px;
     text-align: center;
     font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .contact-info{
