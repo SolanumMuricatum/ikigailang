@@ -6,12 +6,18 @@ const reviews = document.getElementById("reviews-scroll-to");
 const courses = document.getElementById("courses-scroll-to");
 const prices = document.getElementById("prices-scroll-to");
 const contacts = document.getElementById("contacts-scroll-to");
+const test = document.getElementById("test-scroll-to");
+
+const levelOfKnowlege = document.getElementById("level-of-knowlege-button");
+const consultingButton = document.getElementById("consulting-button");
 
 const aboutUsBurger = document.getElementById("about-us-burger-scroll-to");
 const reviewsBurger = document.getElementById("reviews-burger-scroll-to");
 const coursesBurger = document.getElementById("courses-burger-scroll-to");
 const pricesBurger = document.getElementById("prices-burger-scroll-to");
 const contactsBurger = document.getElementById("contacts-burger-scroll-to");
+const faqBurger = document.getElementById("faq-burger-scroll-to");
+const testBurger = document.getElementById("test-burger-scroll-to");
 
 const cardsWrapper = document.getElementById('cards-wrapper');
 const nextBtn = document.getElementById('nextBtn');
@@ -28,6 +34,20 @@ const darkModeBurger = document.getElementById('dark-mode-burger');
 const burgerIcon = document.getElementById('burger-icon');
 const navMenu = document.getElementById('nav-menu');
 
+function getQueryParameter(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Получаем тему из URL
+const theme = getQueryParameter('theme');
+
+if (theme === 'dark-theme') {
+  document.body.classList.add(theme); // Устанавливаем класс для темы
+}
+
+var currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
+console.log(currentTheme);
 
 function updatePadding() {
   const rect = svgLogo.getBoundingClientRect();
@@ -75,33 +95,40 @@ function updateButtons() {
 
 //сразу при загрузке
 updatePadding();
-updateButtons();
+if(cardsWrapper!==null){
+  updateButtons();
+}
 themeDetection();
 window.addEventListener('resize', updatePadding);
 
 
 lightMode.addEventListener('click', () => {
   document.body.classList.remove('dark-theme');
+  currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
   themeDetection();
 });
 
 darkMode.addEventListener('click', ()=>{
   document.body.classList.add('dark-theme');
+  currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
   themeDetection();
 })
 
 lightModeBurger.addEventListener('click', () => {
   document.body.classList.remove('dark-theme');
+  currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
   themeDetection();
 });
 
 darkModeBurger.addEventListener('click', ()=>{
   document.body.classList.add('dark-theme');
+  currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
   themeDetection();
 })
 
 burgerModeSwitcher.addEventListener('click', function() {
   document.body.classList.toggle('dark-theme');
+  currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : "light-theme";
 });
 
 
@@ -130,6 +157,19 @@ contacts.addEventListener('click', function() {
   const target = document.getElementById("contacts-target-div");
   target.scrollIntoView({ behavior: 'smooth' }); 
 });
+
+consultingButton.addEventListener('click', function() {
+  const target = document.getElementById("contacts-target-div");
+  target.scrollIntoView({ behavior: 'smooth' }); 
+});
+
+test.addEventListener('click', function(){
+  alert('Тест временно недоступен. Приносим свои извинения');
+})
+
+levelOfKnowlege.addEventListener('click', function(){
+  alert('Тест временно недоступен. Приносим свои извинения');
+})
 
 // Для бургера
 
@@ -168,24 +208,35 @@ contactsBurger.addEventListener('click', function() {
   burgerIcon.classList.remove('open');
 });
 
+testBurger.addEventListener('click', function(){
+  navMenu.classList.remove('active');
+  burgerIcon.classList.remove('open');
+  alert('Тест временно недоступен. Приносим свои извинения');
+})
 
 
 
-nextBtn.addEventListener('click', () => {
-  cardsWrapper.scrollBy({
-    left: 391, 
-    behavior: 'smooth'
+if(nextBtn!==null){
+  nextBtn.addEventListener('click', () => {
+    cardsWrapper.scrollBy({
+      left: 391, 
+      behavior: 'smooth'
+    });
   });
-});
+}
 
-prevBtn.addEventListener('click', () => {
-  cardsWrapper.scrollBy({
-    left: -391, 
-    behavior: 'smooth'
+if(prevBtn!==null){
+  prevBtn.addEventListener('click', () => {
+    cardsWrapper.scrollBy({
+      left: -391, 
+      behavior: 'smooth'
+    });
   });
-});
+}
 
-cardsWrapper.addEventListener('scroll', updateButtons);
+if(cardsWrapper!==null){
+  cardsWrapper.addEventListener('scroll', updateButtons);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -205,4 +256,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+});
+
+document.getElementById('faq').addEventListener('click', function() {
+  window.location.href = `./faq.html?theme=${currentTheme}`;
+});
+
+faqBurger.addEventListener('click', function() {
+  window.location.href = `./faq.html?theme=${currentTheme}`;
+});
+
+document.getElementById('emailToCopy').addEventListener('click', function() {
+  const text = this.innerText; // Получаем текст для копирования
+  alert('Почта скопирована в буфер обмена');
 });
