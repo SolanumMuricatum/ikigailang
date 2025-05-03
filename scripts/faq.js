@@ -8,6 +8,7 @@ const prices = document.getElementById("prices-scroll-to");
 const contacts = document.getElementById("contacts-scroll-to");
 const logo = document.getElementById("logo-scroll-to");
 const test = document.getElementById("test-scroll-to");
+const teachers = document.getElementById("teachers-scroll-to");
 
 const aboutUsBurger = document.getElementById("about-us-burger-scroll-to");
 const reviewsBurger = document.getElementById("reviews-burger-scroll-to");
@@ -17,6 +18,7 @@ const contactsBurger = document.getElementById("contacts-burger-scroll-to");
 const faqBurger = document.getElementById("faq-burger-scroll-to");
 const logoBurger = document.getElementById("logo-burger-scroll-to");
 const testBurger = document.getElementById("test-burger-scroll-to");
+const teachersBurger = document.getElementById("teachers-burger-scroll-to");
 
 const lightMode = document.getElementById('light-mode');
 const darkMode = document.getElementById('dark-mode');
@@ -160,6 +162,10 @@ testBurger.addEventListener('click', function(){
   alert('Тест временно недоступен. Приносим свои извинения');
 })
 
+teachersBurger.addEventListener('click', function(){
+  window.location.href = `./teachers.html?theme=${currentTheme}`;
+})
+
 document.getElementById('faq').addEventListener('click', function() {
   window.location.href = `./faq.html?theme=${currentTheme}`;
 });
@@ -211,3 +217,7 @@ logo.addEventListener('click', function() {
 test.addEventListener('click', function(){
   alert('Тест временно недоступен. Приносим свои извинения');
 })
+
+teachers.addEventListener('click', function() {
+  window.location.href = `./teachers.html?theme=${currentTheme}`;
+});

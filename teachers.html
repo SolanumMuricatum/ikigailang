@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./photo/icon-ikigai.png" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/teachers.css">
+  <title>IkigaiLang</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="main-block">
+      <div class="header-big-device">
+        <header class="header">
+          <div class="logo">
+            <svg id="svg-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15.25" fill="none"/>
+              <path d="M18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 21.588C15.8853 21.7747 15.7597 21.962 15.623 22.15C14.309 23.947 12.496 25.004 11 25L10.698 22.925L8.62 23.281C8.154 21.868 8.649 19.767 9.962 17.969C7.935 17.266 6.442 15.897 6 14.5L7.86 13.569L6.894 11.703C8.081 10.82 10.42 10.713 12.509 11.404C12.509 9 13.336 6.87 14.539 6L16 7.5L17.46 6C18.664 6.87 19.502 9 19.49 11.404C21.58 10.714 23.919 10.82 25.106 11.703L24.141 13.569L26 14.5C25.558 15.896 24.065 17.265 22.038 17.97C23.351 19.767 23.846 21.868 23.38 23.281L21.302 22.925L21 25C19.504 25.004 17.691 23.947 16.377 22.15C16.2435 21.9681 16.1177 21.7806 16 21.588Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div id="logo-scroll-to" class="logo-name">IkigaiLang</div>
+          </div>
+          <div class="center-bar text-bar">
+            <div class="details-text-wrapper">
+              <div id="about-us-bar">О нас</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="about-us-scroll-to">О нас</div>
+                <div id="reviews-scroll-to">Отзывы</div>
+                <div id="teachers-scroll-to">Преподаватели</div>
+              </div>
+            </div>
+            <div id="courses-scroll-to">Курсы</div>
+            <div id="test-scroll-to">Онлайн-тест</div>
+            <div class="contacts-href"><a href="https://docs.google.com/spreadsheets/d/1gpnJS94vBDoWTayQox7Vku8zWJYDopjqURDh0t5aW8k/edit?hl=ru&gid=0#gid=0 "target="_blank" rel="noopener">Расписание</a></div>
+            <div id="prices-scroll-to">Цены</div>
+            <div id="faq">FAQ</div>
+            <div id="contacts-scroll-to">Контакты</div>
+          </div>
+          <div class="theme-wrapper text-bar">
+            <div class="circle"></div>
+            <div class="details-text-wrapper">
+              <div id="theme-bar">Тема</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="light-mode">Светлая</div>
+                <div id="dark-mode">Тёмная</div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="header-small-device">
+        <header class="header-burger">
+          <!-- Бургер-меню -->
+          <div class="burger-menu" id="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        
+          <div class="logo-wrapper">
+            <div class="logo-name">
+              <div class="logo">
+                <svg id="svg-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="15.25" fill="none"/>
+                  <path d="M18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18C15.4696 18 14.9609 17.7893 14.5858 17.4142C14.2107 17.0391 14 16.5304 14 16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14C16.5304 14 17.0391 14.2107 17.4142 14.5858C17.7893 14.9609 18 15.4696 18 16Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16 21.588C15.8853 21.7747 15.7597 21.962 15.623 22.15C14.309 23.947 12.496 25.004 11 25L10.698 22.925L8.62 23.281C8.154 21.868 8.649 19.767 9.962 17.969C7.935 17.266 6.442 15.897 6 14.5L7.86 13.569L6.894 11.703C8.081 10.82 10.42 10.713 12.509 11.404C12.509 9 13.336 6.87 14.539 6L16 7.5L17.46 6C18.664 6.87 19.502 9 19.49 11.404C21.58 10.714 23.919 10.82 25.106 11.703L24.141 13.569L26 14.5C25.558 15.896 24.065 17.265 22.038 17.97C23.351 19.767 23.846 21.868 23.38 23.281L21.302 22.925L21 25C19.504 25.004 17.691 23.947 16.377 22.15C16.2435 21.9681 16.1177 21.7806 16 21.588Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div id="logo-burger-scroll-to" class="logo-name">IkigaiLang</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="theme-wrapper text-bar">
+            <div class="circle" id="circle-burger"></div>
+            <div class="details-text-wrapper">
+              <div id="theme-bar">Тема</div>
+              <div class="triangle-bar">▽</div>
+              <div class="dropdown-menu">
+                <div id="light-mode-burger">Светлая</div>
+                <div id="dark-mode-burger">Тёмная</div>
+              </div>
+            </div>
+          </div>
+          
+        </header>
+        
+        <!-- Навигационное боковое меню -->
+        <nav class="side-nav" id="nav-menu">
+          <div class="side-nav-wrapper">
+            <div class="text-bar-burger" id="about-us-burger-scroll-to">О нас</div>
+            <div class="text-bar-burger" id="reviews-burger-scroll-to">Отзывы</div>
+            <div class="text-bar-burger" id="teachers-burger-scroll-to">Преподаватели</div>
+            <div class="text-bar-burger" id="courses-burger-scroll-to">Курсы</div>
+            <div class="text-bar-burger" id="test-burger-scroll-to">Онлайн-тест</div>
+            <div class="text-bar-burger contacts-href"><a href="https://docs.google.com/spreadsheets/d/1gpnJS94vBDoWTayQox7Vku8zWJYDopjqURDh0t5aW8k/edit?hl=ru&gid=0#gid=0" target="_blank" rel="noopener">Расписание</a></div>
+            <div class="text-bar-burger" id="prices-burger-scroll-to">Цены</div>
+            <div class="text-bar-burger" id="faq-burger-scroll-to">FAQ</div>
+            <div class="text-bar-burger" id="contacts-burger-scroll-to">Контакты</div>
+          </div>
+        </nav> 
+      </div>
+      
+      <div>
+        <div class="card-container">
+          <div class="card">
+            <img class="card-img" src="./photo/oleg-sheps_42.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Олег Олегович
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 10 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Бостонский университет
+              </article>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img" src="./photo/aaron.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Аарон Тейлор-Джонсон
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 15 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Кембридж
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/strakhov.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Даниил Александрович
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 12 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: МГУ
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/evagreen.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Ева Грин
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 12 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Бостонский университет
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/yuliasnigir.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Юлия Снигирь
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 9 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: МГУ
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/shonbean.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Шон Бин
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 17 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: ETH Zurich
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/kristofwaltz.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Кристоф Вальц
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 15 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: ETH Zurich
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/garryoldman.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Гэри Олдман
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 18 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Кембридж
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/mads.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Мадс Миккельсен
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 20 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Кембридж
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/pepino.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Анна Пекач
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 3 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: БГУИР
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/christianbale.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Кристиан Бейл
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 11 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Гарвард
+              </article>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img" src="./photo/margo.jpg" alt=""/>
+            <div class="card-text-wrapper">
+              <div class="card-name">
+                  Марго Робби
+              </div>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Опыт работы: 7 лет
+              </article>
+            </div>
+            <div class="card-text-wrapper">
+              <article class="card-description">
+                Образование: Стенфорд
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/teachers.js"></script>
+</body>
+</html>

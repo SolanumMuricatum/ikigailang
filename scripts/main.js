@@ -7,6 +7,7 @@ const courses = document.getElementById("courses-scroll-to");
 const prices = document.getElementById("prices-scroll-to");
 const contacts = document.getElementById("contacts-scroll-to");
 const test = document.getElementById("test-scroll-to");
+const teachers = document.getElementById("teachers-scroll-to");
 
 const levelOfKnowlege = document.getElementById("level-of-knowlege-button");
 const consultingButton = document.getElementById("consulting-button");
@@ -18,6 +19,7 @@ const pricesBurger = document.getElementById("prices-burger-scroll-to");
 const contactsBurger = document.getElementById("contacts-burger-scroll-to");
 const faqBurger = document.getElementById("faq-burger-scroll-to");
 const testBurger = document.getElementById("test-burger-scroll-to");
+const teachersBurger = document.getElementById("teachers-burger-scroll-to");
 
 const cardsWrapper = document.getElementById('cards-wrapper');
 const nextBtn = document.getElementById('nextBtn');
@@ -171,6 +173,9 @@ levelOfKnowlege.addEventListener('click', function(){
   alert('Тест временно недоступен. Приносим свои извинения');
 })
 
+teachers.addEventListener('click', function() {
+  window.location.href = `./teachers.html?theme=${currentTheme}`;
+});
 // Для бургера
 
 aboutUsBurger.addEventListener('click', function() {
@@ -214,6 +219,9 @@ testBurger.addEventListener('click', function(){
   alert('Тест временно недоступен. Приносим свои извинения');
 })
 
+teachersBurger.addEventListener('click', function() {
+  window.location.href = `./teachers.html?theme=${currentTheme}`;
+});
 
 
 if(nextBtn!==null){
@@ -269,4 +277,13 @@ faqBurger.addEventListener('click', function() {
 document.getElementById('emailToCopy').addEventListener('click', function() {
   const text = this.innerText; // Получаем текст для копирования
   alert('Почта скопирована в буфер обмена');
+});
+
+const cardButtons = document.querySelectorAll(".card-button");
+
+cardButtons.forEach(cardButton => {
+  cardButton.addEventListener('click', function() {
+    const target = document.getElementById("contacts-target-div");
+    target.scrollIntoView({ behavior: 'smooth' }); 
+  });
 });
