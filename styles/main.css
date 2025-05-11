@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   color: var(--color-main);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header-small-device{
