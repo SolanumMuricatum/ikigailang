@@ -237,7 +237,7 @@ circle{
   margin-top: 30px;
 }
 
-.card-description{
+.card-description > h6{
   width: 300px;
   font-size: 14pt;
   font-family: sans-serif;
