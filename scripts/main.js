@@ -274,11 +274,6 @@ faqBurger.addEventListener('click', function() {
   window.location.href = `./faq.html?theme=${currentTheme}`;
 });
 
-document.getElementById('emailToCopy').addEventListener('click', function() {
-  const text = this.innerText; // Получаем текст для копирования
-  alert('Почта скопирована в буфер обмена');
-});
-
 const cardButtons = document.querySelectorAll(".card-button");
 
 cardButtons.forEach(cardButton => {
