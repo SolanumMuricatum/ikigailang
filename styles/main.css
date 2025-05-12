@@ -136,7 +136,7 @@ circle{
   position: relative;
 }
 
-#theme-bar, #about-us-bar{
+#theme-bar, #theme-bar-burger, #about-us-bar{
   margin-right: 5px;
 }
 
@@ -1116,7 +1116,7 @@ td {
     padding-right: 25px;
   }
 
-  .details-text-wrapper > #theme-bar, .triangle-bar{
+  .details-text-wrapper > #theme-bar-burger, .triangle-bar{
     display: none;
   }
 
