@@ -6,10 +6,10 @@ const reviews = document.getElementById("reviews-scroll-to");
 const courses = document.getElementById("courses-scroll-to");
 const prices = document.getElementById("prices-scroll-to");
 const contacts = document.getElementById("contacts-scroll-to");
-const test = document.getElementById("test-scroll-to");
+// const test = document.getElementById("test-scroll-to");
 const teachers = document.getElementById("teachers-scroll-to");
 
-const levelOfKnowlege = document.getElementById("level-of-knowlege-button");
+const consultingButtonMainBlock = document.getElementById("consulting-button-main-block");
 const consultingButton = document.getElementById("consulting-button");
 
 const aboutUsBurger = document.getElementById("about-us-burger-scroll-to");
@@ -18,7 +18,7 @@ const coursesBurger = document.getElementById("courses-burger-scroll-to");
 const pricesBurger = document.getElementById("prices-burger-scroll-to");
 const contactsBurger = document.getElementById("contacts-burger-scroll-to");
 const faqBurger = document.getElementById("faq-burger-scroll-to");
-const testBurger = document.getElementById("test-burger-scroll-to");
+// const testBurger = document.getElementById("test-burger-scroll-to");
 const teachersBurger = document.getElementById("teachers-burger-scroll-to");
 
 const cardsWrapper = document.getElementById('cards-wrapper');
@@ -165,12 +165,13 @@ consultingButton.addEventListener('click', function() {
   target.scrollIntoView({ behavior: 'smooth' }); 
 });
 
-test.addEventListener('click', function(){
-  alert('Тест временно недоступен. Приносим свои извинения');
-})
+// test.addEventListener('click', function(){
+//   alert('Тест временно недоступен. Приносим свои извинения');
+// })
 
-levelOfKnowlege.addEventListener('click', function(){
-  alert('Тест временно недоступен. Приносим свои извинения');
+consultingButtonMainBlock.addEventListener('click', function(){
+  const target = document.getElementById("contacts-target-div");
+  target.scrollIntoView({ behavior: 'smooth' }); 
 })
 
 teachers.addEventListener('click', function() {
@@ -213,11 +214,11 @@ contactsBurger.addEventListener('click', function() {
   burgerIcon.classList.remove('open');
 });
 
-testBurger.addEventListener('click', function(){
-  navMenu.classList.remove('active');
-  burgerIcon.classList.remove('open');
-  alert('Тест временно недоступен. Приносим свои извинения');
-})
+// testBurger.addEventListener('click', function(){
+//   navMenu.classList.remove('active');
+//   burgerIcon.classList.remove('open');
+//   alert('Тест временно недоступен. Приносим свои извинения');
+// })
 
 teachersBurger.addEventListener('click', function() {
   window.location.href = `./teachers.html?theme=${currentTheme}`;
