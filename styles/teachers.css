@@ -60,8 +60,11 @@
 
 #scroll-to-top:hover {
   cursor: pointer;
-  background-color: var(--accent-color-main); 
+  background-color: var(--accent-color-extra);
+  border: 1px solid var(--color-extra); 
+  color: var(--color-main);
 }
+
 
 button{
   cursor: pointer;
