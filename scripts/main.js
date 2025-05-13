@@ -288,3 +288,18 @@ cardButtons.forEach(cardButton => {
     target.scrollIntoView({ behavior: 'smooth' }); 
   });
 });
+
+var upButton = document.getElementById('scroll-to-top');
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      upButton.style.display = "block"; 
+  } else {
+      upButton.style.display = "none"; 
+  }
+};
+
+upButton.addEventListener('click', function() {
+  const target = document.getElementById("main-block");
+  target.scrollIntoView({ behavior: 'smooth' }); 
+});

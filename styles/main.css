@@ -29,7 +29,7 @@
   --background-color: #C1CACA;
   --color-main: black;
   --color-extra: white;
-  --accent-color-main: #CD5B45; /* Ваш акцентный цвет для темной темы */
+  --accent-color-main: #CD5B45; 
   --accent-color-extra:  #C5D0E6;
   --main-image: url("../photo/japan_light.png");
 }
@@ -38,9 +38,29 @@
   --background-color: #0a0a0a;
   --color-main: white;
   --color-extra: black;
-  --accent-color-main: #5DB2B7; /* Ваш акцентный цвет для темной темы */
+  --accent-color-main: #5DB2B7; 
   --accent-color-extra:  #8C4743;
   --main-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1e1e1e83 100%), url("../photo/japan_dark_5.png");
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  background-color: var(--accent-color-main); 
+  color: var(--color-extra);
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  display: none;
+}
+
+#scroll-to-top:hover {
+  cursor: pointer;
+  background-color: var(--accent-color-main); 
 }
 
 button{
@@ -322,7 +342,7 @@ h2{
   margin-top: 30px;
 }
 
-.card-description > h6{
+.card-description > h3{
   width: 270px;
   font-size: 14pt;
   font-family: sans-serif;
@@ -1127,7 +1147,7 @@ td {
 
 @media (max-height: 431px) {
   .side-nav-wrapper {
-    overflow-y: scroll; /* Вертикальный скролл */
+    overflow-y: scroll; 
     height: 100vh;
     margin-bottom: 70px;
   }
