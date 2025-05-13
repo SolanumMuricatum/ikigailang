@@ -527,7 +527,13 @@ td {
 
 .reviews-wrapper > div > a{
   color: var(--accent-color-main);
+  text-decoration: none;
 }
+
+.reviews-wrapper > div > a:hover{
+  text-decoration: underline;
+}
+
 
 .contacts-block{
   width: 100%;
@@ -568,10 +574,15 @@ td {
 
 .contact-info > div > a{
   color: var(--accent-color-main);
+  text-decoration: none;
 }
 
-#emailToCopy{
-  cursor: pointer;
+.contact-info > div > a:hover{
+  text-decoration: underline;
+}
+
+#address{
+  width: 320px;
 }
 
 @media (max-width: 1440px) {
